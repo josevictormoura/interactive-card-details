@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(images/bg-main-desktop.png) no-repeat left bottom;
+    background-size: contain;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    margin-left: 180px;
+    flex-wrap: wrap;
+}
+
+.container-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-front{
+    position: relative;
+}
+
+.logo-card{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+.number{
+    position: absolute;
+    color: white;
+    letter-spacing: 2px;
+    bottom: 80px;
+    left: 20px;
+}
+
+.card-info{
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 70px); /* Ajuste conforme necessário */
+    color: white;
+    font-size: 16px;
+}
+
+.card-info #card-name{
+    text-transform: uppercase;
+}
+
+.card-back{
+    position: relative;
+    transform: translateX(100px);
+}
+
+.card-back .cvs{
+    position: absolute;
+    top: 112px;
+    right: 50px;
+    color: white;
+    font-size: 18px;
+}
+
+/* form */
+
+.container-form{
+    margin: 0 auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px;
+}
+
+.fild{
+    display: flex;
+    flex-direction: column;
+}
+
+.fild label{
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.fild input{
+    padding: 12px;
+    border-radius: 5px;
+    border: solid 1px rgb(189, 183, 183);
+    outline: none;
+}
+
+.fild input:focus{
+    border-color: #9879fc;
+}
+
+.form button{
+    padding: 15px;
+    border-radius: 7px;
+    border: none;
+    background: #21082F;
+    color: white;
+    font-size: 16px;
+}
+
+.form .fild-data{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form .fild-data .fild-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.form .inputs-data input{
+    width: 60px;
+}
+
+.form .input-cvc{
+    display: flex;
+    flex-direction: column;
+}
+
+.form .input-cvc input{
+    width: 200px;
+}
+
+.span{
+    font-size: 12px;
+    color: red;
+    margin-top: 3px;
+    opacity: 0;
+}
+
+.span.active{
+    opacity: 1;
+}
+
+.border-erro{
+    border-color: red !important;
+}
+
+/* Container Sucess */
+
+.container-sucess{
+    margin: 0 auto;
+    display: none;
+}
+
+.container-sucess.active{
+    display: flex;
+}
+
+.sucess{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sucess img{
+    margin-bottom: 20px;
+}
+
+.sucess-title{
+    font-size: 2rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.sucess-message{
+    color: grey;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+@media (max-width: 400px) {
+    .container-cards{
+        margin: 0 auto 0 50px !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .card-back{
+        order: -1;
+        transform: translateX( 10px);
+        margin-top: 20px;
+    }
+
+    .card-front{
+        transform: translateX(-20px);
+        top: -95px;
+    }
+
+    .card{
+        width:300px;
+    }
+
+    .card-back .cvs{
+        top: 73px;
+        right: 35px;
+    }
+
+    .container{
+        gap: 0px;
+    }
+
+    .logo-card{
+        width: 50px;
+        top: 15px;
+    }
+
+    .container-form{
+        margin-top: -70px;
+    }
+
+    .form{
+        gap: 15px;
+    }
+
+    .container-cards{
+        margin-top: 10px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    body{
+        background: url(images/bg-main-mobile.png) no-repeat;
+        background-size: contain;
+    }
+
+    .container-cards{
+        margin: 0 auto;
+    }
+
+    .container{
+        margin-left: 0;
+        /* flex-direction: column; */
+    }
+
+}
+
+.animate{
+    animation: animatezoom 0.4s;
+  }
+  
+  @keyframes animatezoom{
+    from{transform: scale(0)}
+    to{transform: scale(1);}
+  }
