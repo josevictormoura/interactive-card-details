@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <title>Card-Details</title>
+</head>
+<body>
+  <main class="wrapper">
+    <section class="container">
+      <div class="container-cards">
+        <!-- card front -->
+        <div class="card-front">
+          <img src="images/card-logo.svg" alt="logo-card" class="logo-card">
+          <div class="card-container">
+            <img src="images/bg-card-front.png" alt="card-front" class="card">
+            <h1 class="number">0000 0000 0000 0000</h1>
+            <div class="card-info">
+              <span id="card-name">Jane Appleseed</span>
+              <div class="date">
+                <span id="month">00</span>
+                /
+                <span id="year">00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card back -->
+        <div class="card-back">
+          <img src="images/bg-card-back.png" alt="card-back" class="card">
+          <span class="cvs">000</span>
+        </div>
+      </div>
+      <!-- formulario -->
+      <div class="container-form">
+        <form id="form" class="form">
+          <div class="fild">
+            <label for="name">CARDHOLDER NAME</label>
+            <input type="text" id="name" placeholder="e.g. Jane Applesed">
+            <span class="span erro-name">Nome vazio, curto</span>
+          </div>
+          <div class="fild">
+            <label for="number">CARDHOLDER NUMBER</label>
+            <input type="text" id="number" placeholder="1234 5678 9123 000" maxlength="16">
+            <span class="span erro-number">Formato errado, apenas número</span>
+          </div>
+          <div class="fild">
+            <div class="fild-data">
+              <div class="fild-content">
+                <label class="label">EXP. DATE (MM/YY)</label>
+                <div class="inputs-data">
+                  <input type="text" id="mm" placeholder="MM" maxlength="2">
+                  <input type="text" id="yy" placeholder="YY" maxlength="2">
+                  <span class="span erro-date">Apenas número, ou campos vazios</span>
+                </div>
+              </div>
+              <div class="input-cvc">
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" placeholder="e.g. 123" maxlength="3">
+                <span class="span erro-cvc">Apenas número, ou campos vazios</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn-confirm" type="submit">Confirm</button>
+        </form>
+      </div>
+      <div class="container-sucess">
+        <div class="sucess">
+          <img src="images/icon-complete.svg" alt="">
+           <h2 class="sucess-title">Obrigado!</h2>
+           <p class="sucess-message">Adicionamos os detalhes do seu cartão</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
